@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Lists
+from .models import List
 
 # Register your models here.
-admin.register(Lists)
+admin.site.register(List)
