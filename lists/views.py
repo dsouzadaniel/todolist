@@ -1,4 +1,4 @@
-# from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
 from django.http import HttpResponse
 
 
@@ -6,3 +6,7 @@ from django.http import HttpResponse
 
 def HomePageView(request):
     return HttpResponse("Hello World!")
+
+
+class ListDetailView(DetailView):
+    pass
