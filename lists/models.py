@@ -11,8 +11,10 @@ class List(models.Model):
 
 
 class Item(models.Model):
-    list = models.ForeignKey(List, on_delete=models.CASCADE)
-    item = models.CharField(max_length=140)
+    list = models.ForeignKey(List,
+                             on_delete=models.CASCADE,
+                             related_name='items')
+    item_name = models.TextField()
 
     def __str__(self):
-        return str(self.item)
+        return str(self.item_name)
