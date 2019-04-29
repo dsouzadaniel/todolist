@@ -1,0 +1,5 @@
+<h3>{{ object.list_name }}</h3>
+<br>
+{% for item in object.items.all %}
+    <ol>{{ item.item_name }}</ol>
+{% endfor %}
