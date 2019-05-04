@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>The List of Lists!</h2>
+<br>
+{% for single_list in object_list %}
+<a href = "{% url 'list_detail' single_list.pk %}">{{ single_list }}</a>
+{% endfor %}
+{% endblock content %}
