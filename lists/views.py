@@ -1,4 +1,5 @@
 from django.views.generic.detail import DetailView
+from django.views.generic.edit import CreateView
 from django.views.generic.list import ListView
 from django.http import HttpResponse
 
@@ -15,3 +16,8 @@ class HomePageView(ListView):
 class ListDetailView(DetailView):
     model = List
     template_name = 'list_detail.html'
+
+class ListCreateView(CreateView):
+    model = List
+    template_name = 'list_create.html'
+    fields = ['list_name']
