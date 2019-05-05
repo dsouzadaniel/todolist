@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1> Edit Item </h1>
+    <form action="" method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Save" />
+    </form>
+        <form action="{% url 'home' %}">
+            <input type="submit" value="Go Back" />
+        </form>
+{% endblock content %}

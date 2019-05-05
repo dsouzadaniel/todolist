@@ -2,7 +2,10 @@
 {% block content %}
 <h3>{{ object.list_name }}</h3>
 <br>
+<p><a href="{% url 'item_create' object.pk%}">Add Item</a></p>
 {% for item in object.items.all %}
-    <ol>{{ item.item_name }}</ol>
+    <p>{{ item.item_name }}<a href="{% url 'item_update' object.pk item.pk %}">Edit</a></p>
 {% endfor %}
+<br>
+<h4><a href="{% url 'home' %}">Go Back to Home</a></h4>
 {% endblock content %}
