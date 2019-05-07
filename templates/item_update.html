@@ -3,9 +3,6 @@
     <h1> Edit Item </h1>
     <form action="" method="post">{% csrf_token %}
         {{ form.as_p }}
-        <input type="submit" value="Save" />
+        <p style="padding-right: 5px;"><a href="{% url 'home' %}" class="btn btn-secondary">Back</a></p><button class="btn btn-success" type="Submit">Save</button>
     </form>
-        <form action="{% url 'home' %}">
-            <input type="submit" value="Go Back" />
-        </form>
 {% endblock content %}
