@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
+<a href="{% url 'home' %}" class="btn btn-secondary">Back</a>
     <h1> Edit Item </h1>
     <form action="" method="post">{% csrf_token %}
         {{ form.as_p }}
-        <p style="padding-right: 5px;"><a href="{% url 'home' %}" class="btn btn-secondary">Back</a></p><button class="btn btn-success" type="Submit">Save</button>
+        <p style="padding-left: 5px;"></p><button class="btn btn-success" type="Submit">Save</button>
     </form>
 {% endblock content %}
